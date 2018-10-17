@@ -55,13 +55,13 @@ class Home extends Component {
               <div className="links">
                 <img src={icon} alt="university " className="university"/>
                 Gotham Insurance Portal
-                <Link to={`/home`} className="selected">
+                <Link to={`/`} className="selected">
                   Home
                 </Link>
-                <Link to={`/events`} className="selection">
+                <Link to={`/portal`} className="selection">
                   Claims Portal
                 </Link>
-                <Link to={`/newClaim`} className="selection">
+                <Link to={`/`} className="selection">
                   Forms
                 </Link>
                 <div className="profile">

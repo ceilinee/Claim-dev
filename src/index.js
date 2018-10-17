@@ -10,8 +10,8 @@ import newClaim from './newClaim.js';
 render(
     <BrowserRouter>
       <Switch>
-        <Route exact={true} path='/' component={App}/>
-        <Route exact={true} path='/home' component={Home}/>
+        <Route exact={true} path='/' component={Home}/>
+        <Route exact={true} path='/portal' component={App}/>
         <Route exact={true} path='/newClaim' component={newClaim}/>
         <Redirect to='/' />
       </Switch>

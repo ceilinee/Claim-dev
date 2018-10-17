@@ -285,13 +285,13 @@ class App extends Component {
               <div className="links">
                 <img src={icon} alt="university " className="university"/>
                 Gotham Insurance Portal
-                <Link to={`/home`} className="selection">
+                <Link to={`/`} className="selection">
                   Home
                 </Link>
-                <Link to={`/events`} className="selected">
+                <Link to={`/portal`} className="selected">
                   Claims Portal
                 </Link>
-                <Link to={`/newClaim`} className="selection">
+                <Link to={`/`} className="selection">
                   Forms
                 </Link>
                 <div className="profile">
