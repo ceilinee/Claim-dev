@@ -242,7 +242,7 @@ export default class Claim extends React.Component {
 														  },
 														  {
 														    "Emotion": "Joy",
-														    "Joy": 30,
+														    "Joy": 20,
 														  },
 														  {
 														    "Emotion": "Sadness",
@@ -258,7 +258,7 @@ export default class Claim extends React.Component {
 										        indexBy="Emotion"
 										        margin={{
 										            "top": 50,
-										            "right": 130,
+										            "right": 80,
 										            "bottom": 50,
 										            "left": 60
 										        }}
@@ -295,6 +295,7 @@ export default class Claim extends React.Component {
 										        ]}
 										        borderColor="inherit:darker(1.6)"
 										        labelSkipWidth={12}
+														layout="horizontal"
 										        labelSkipHeight={12}
 										        labelTextColor="inherit:darker(1.6)"
 										        animate={true}
