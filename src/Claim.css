@@ -1,0 +1,43 @@
+.context-left{
+  width:250px;
+}
+.context-right{
+  text-align:center;
+}
+.context-title{
+  font-size:13px;
+  margin-bottom:20px;
+}
+.senti{
+  height: 180px;
+  margin-left: 35px;
+  margin-top: 20px;
+}
+.carpic{
+  border-radius: 10px;
+  width:200px;
+}
+.close{
+  height: 150px;
+  margin-right: 20px;
+  margin-top: -10px;
+  float: right;
+  font-size: 30px;
+}.close:hover{
+  cursor: pointer;
+}
+.sentiment-chart{
+  width: 100%;
+  height: 200px;
+  margin-top: -30px;
+}
+.context-chart{
+  width: 350px;
+  height: 200px;
+  margin-top: -30px;
+}
+.context-chart-new{
+  width: 330px;
+  height: 130px;
+  margin-top:40px;
+}
