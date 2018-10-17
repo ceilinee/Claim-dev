@@ -94,7 +94,7 @@ class Home extends Component {
             <img src="https://image.flaticon.com/icons/svg/68/68587.svg" alt="icon" className="home-icon"/>
             <div className="home-box-title">
             Bruce Wayne Claim
-            <p className="home-text">Process this claim by Nov 30th this is a very urgent claim</p>
+            <p className="home-text">Process this claim by the end of this week, this is a very urgent claim</p>
             </div>
           </Link>
           <div className="home-box-inner">
@@ -102,7 +102,7 @@ class Home extends Component {
             <img src="https://image.flaticon.com/icons/svg/1179/1179257.svg" alt="icon" className="home-icon"/>
             <div className="home-box-title">
             Mike Smith Claim
-            <p className="home-text">Process this claim by Nov 30th this is a very urgent claim</p>
+            <p className="home-text">Process this claim by next Tuesday, this is very urgent.</p>
             </div>
           </div>
           <div className="home-box-inner">
@@ -110,7 +110,7 @@ class Home extends Component {
             <img src="https://image.flaticon.com/icons/svg/846/846325.svg" alt="icon" className="home-icon"/>
             <div className="home-box-title">
             Martin Jaimes Claim
-            <p className="home-text">Process this claim by Nov 30th this is a very urgent claim</p>
+            <p className="home-text">Client going on vacation, finish processing by Next Friday.</p>
             </div>
           </div>
         </div>
@@ -119,24 +119,24 @@ class Home extends Component {
             <div className="home-box-liner"/>
             <img src="https://image.flaticon.com/icons/svg/68/68587.svg" alt="icon" className="home-icon"/>
             <div className="home-box-title">
-            Bruce Wayne Claim
-            <p className="home-text">Process this claim by Nov 30th this is a very urgent claim</p>
+            Bruce Chan Claim
+            <p className="home-text">No additional message and actions required</p>
             </div>
           </Link>
           <div className="home-box-inner">
             <div className="home-box-liner"/>
             <img src="https://image.flaticon.com/icons/svg/1179/1179257.svg" alt="icon" className="home-icon"/>
             <div className="home-box-title">
-            Mike Smith Claim
-            <p className="home-text">Process this claim by Nov 30th this is a very urgent claim</p>
+            Marcus Smith Claim
+            <p className="home-text">No additional message and actions required</p>
             </div>
           </div>
           <div className="home-box-inner">
             <div className="home-box-liner"/>
             <img src="https://image.flaticon.com/icons/svg/846/846325.svg" alt="icon" className="home-icon"/>
             <div className="home-box-title">
-            Martin Jaimes Claim
-            <p className="home-text">Process this claim by Nov 30th this is a very urgent claim</p>
+            Greg Raymond Claim
+            <p className="home-text">No additional message and actions required</p>
             </div>
           </div>
         </div>
