@@ -28,7 +28,7 @@ class App extends Component {
       open: false,
       claim: true,
       language: true,
-      claimlist: [],
+      claimlist: [{idClaims: 1, street: "Adelaide", city: "Adelaide", link: "https://i.imgur.com/BleOAcq.png", imgTrait: "90,80,70,90,90", chatTrait: "60,70,30,40", date: "10/10/2018"}],
       loading: true,
     }
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -44,11 +44,11 @@ class App extends Component {
     setTimeout(() => this.setState({ loading: false }), 1000);
   }
   fetchClaims = () => {
-    fetch('/users/', {
-			accept: 'application/json',
-		}).then((response) => response.json()).then(response => {
-			this.setClaims(response);
-		});
+    // fetch('/users/', {
+		// 	accept: 'application/json',
+		// }).then((response) => response.json()).then(response => {
+		// 	this.setClaims(response);
+		// });
   }
   setClaims = (data) => {
     var newdata = [];
@@ -265,9 +265,6 @@ class App extends Component {
         <div className="box4">
           <div className="title">
             Bruce Wayne (42938472) - Active
-            <Link to={`/newClaim`} className="newClaimButton">
-              Start new claim
-            </Link>
           </div>
         </div>
         {this.renderClaimant()}

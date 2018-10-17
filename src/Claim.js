@@ -39,11 +39,11 @@ export default class Claim extends React.Component {
 
 	}
 	fetchChat = () => {
-		fetch('/users/chat', {
-			accept: 'application/json',
-		}).then((response) => response.json()).then(response => {
-			this.setChat(response);
-		});
+		// fetch('/users/chat', {
+		// 	accept: 'application/json',
+		// }).then((response) => response.json()).then(response => {
+		// 	this.setChat(response);
+		// });
 	}
 	setChat = (data) => {
 		var newdata = [];
@@ -234,19 +234,19 @@ export default class Claim extends React.Component {
 											<ResponsiveBar
 										        data={[{
 														    "Emotion": "Anger",
-														    "Anger": this.props.claim.chatTrait.substring(0,2),
+														    "Anger": 50,
 														  },
 														  {
 														    "Emotion": "Fear",
-																"Fear": this.props.claim.chatTrait.substring(3,5),
+																"Fear": 70,
 														  },
 														  {
 														    "Emotion": "Joy",
-														    "Joy": this.props.claim.chatTrait.substring(6,8),
+														    "Joy": 30,
 														  },
 														  {
 														    "Emotion": "Sadness",
-														    "Sadness": this.props.claim.chatTrait.substring(9,11),
+														    "Sadness": 40,
 														  }
 													    ]}
 										        keys={[
@@ -308,34 +308,56 @@ export default class Claim extends React.Component {
       </div>
     )
   }
-  renderChat = () => {
+	renderChat = () => {
     return(
       <div className="chat">
-				{this.state.chatlist.map(chat =>
-						<Chat
-						key={chat.idChat}
-						chat={chat}
-					/>
-				)}
+        <p className="chat-right">Hello</p>
+        <p>Hello! How can we help you today?</p>
+        <p className="chat-right">Check Coverage</p>
+        <p><img src={card} alt="card" className="card"/></p>
+        <p className="chat-right">I just got in an accident!</p>
+        <p>It sounds like you’ve had quite an adventurous day. </p>
+        <p>Lets start a new auto claim for you! Where did the accident occur?</p>
+        <p className="chat-right"><img src={location} alt="card" className="card"/></p>
+        <p>Was there another car or person involved in the accident?</p>
+        <p className="chat-right">yes</p>
+        <p>Oh no! That sounds bad.</p>
+        <p>Do you want to submit a picture to attach to the claim?</p>
+        <p className="chat-right">yes</p>
+        <p>Okay. Please use your camera to take a photo or select an existing photo.</p>
+        <p className="chat-right">yes</p>
+        <p>I have submitted a claim on your behalf. You can review the submitted information below. </p>
+        <p><img src={summary} alt="card" className="card"/></p>
+      </div>
+    )
+  }
+  renderFrChat = () => {
+    return(
+      <div className="chat">
+        <p className="chat-right">Bonjour</p>
+        <p>Salut! Que peut-on faire pour vous aider aujourd'hui?</p>
+        <p className="chat-right">Vérifier la couverture</p>
+        <p><img src={card} alt="card" className="card"/></p>
+        <p className="chat-right">Je viens d'avoir un accident!</p>
+        <p>On dirait que vous avez passé une journée aventureuse. </p>
+        <p>Commençons une nouvelle réclamation automatique pour vous! Où l'accident s'est-il produit?</p>
+        <p className="chat-right"><img src={location} alt="card" className="card"/></p>
+        <p>Y avait-il une autre voiture ou une personne impliquée dans l'accident?</p>
+        <p className="chat-right">Oui</p>
+        <p>Oh non! Cela sonne mal.</p>
+        <p>Voulez-vous soumettre une photo à joindre à la demande?</p>
+        <p className="chat-right">yes</p>
+        <p>D'accord. Veuillez utiliser votre appareil photo pour prendre une photo ou sélectionner une photo existante.</p>
+        <p className="chat-right">Oui</p>
+        <p>Jai soumis une demande en votre nom. Vous pouvez consulter les informations soumises ci-dessous.</p>
+        <p><img src={summary} alt="card" className="card"/></p>
       </div>
     )
   }
 	deleteClaim = () => {
-		axios.delete('/users/deleteClaim', { params: { idClaims: this.props.claim.idClaims } })
-				.then(this.setState({open: false})).then(() => {this.props.refresh()});
+		// axios.delete('/users/deleteClaim', { params: { idClaims: this.props.claim.idClaims } })
+		// 		.then(this.setState({open: false})).then(() => {this.props.refresh()});
 	}
-  renderFrChat = () => {
-    return(
-      <div className="chat">
-				{this.state.chatlist.map(chat =>
-						<ChatFr
-						key={chat.idChat}
-						chat={chat}
-					/>
-				)}
-      </div>
-    )
-  }
   render(){
     var date = this.props.claim.date.toString();
     var time = date.substring(0,10);
