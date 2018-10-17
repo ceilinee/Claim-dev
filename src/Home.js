@@ -80,7 +80,7 @@ class Home extends Component {
       <div className="banner">
           <h1 className="home-h1">Welcome to the agent portal</h1>
           <p className= "paragraph">
-            October 12th is our firm wide event on insurance do not forget to attend
+            October 12th is our firm wide community impact event, come support our contributions!
           </p>
       </div>
     )
