@@ -20,6 +20,7 @@ import App from './App';
 import Chat from './Chat';
 import ChatFr from './ChatFr';
 import { ResponsiveBar } from '@nivo/bar';
+import Chart from './Chart';
 
 export default class Claim extends React.Component {
 	constructor(props) {
@@ -66,6 +67,10 @@ export default class Claim extends React.Component {
     var date = this.props.claim.date.toString();
 		var data = 40;
     var time = date.substring(0,10);
+		var colorarray = ["#667EEA","#6778E2","#6972DA","#6B6DD2","#6D67CA","#6E61C2","#705CBA","#705CBA","#7450AA","#764BA2"];
+		var colorarray2 = ["#56A4E4","#579FE4","#599BE5","#5B97E6","#5D93E6","#5E8EE7","#608AE8","#6286E8","#6482E9","#667EEA"];
+		var colorarray3 = ["#36D1DC","#3AC8DD","#3EC0DE","#42B8DF","#46AFE0","#4AA7E1","#4AA7E1","#5296E3","#568EE4","#5B86E5"];
+		var colorarray4 = ["#5b86e5","#547DD5","#4E75C5","#486DB5","#4264A5","#3C5C95","#365485","#304b75","#2a4365","#243b55"];
     return(
       <div id="modal">
         <div id="modal-background">
@@ -136,91 +141,10 @@ export default class Claim extends React.Component {
 													Image Attributes
 												</div>
 												<div className="context-chart">
-												<ResponsiveBar
-															data={[{
-																	"Emotion": "Color",
-																	"Color": this.props.claim.imgTrait.substring(0,2),
-																},
-																{
-																	"Emotion": "Vehicle",
-																	"Vehicle": this.props.claim.imgTrait.substring(3,5),
-																},
-																{
-																	"Emotion": "Car",
-																	"Car": this.props.claim.imgTrait.substring(6,8),
-																},
-																{
-																	"Emotion": "Sports",
-																	"Sports": this.props.claim.imgTrait.substring(9,11),
-																},
-																{
-																	"Emotion": "Roadster",
-																	"Roadster": this.props.claim.imgTrait.substring(12,14),
-																}
-																]}
-															keys={[
-																	"Color",
-																	"Vehicle",
-																	"Car",
-																	"Sports",
-																	"Roadster"
-															]}
-															indexBy="Emotion"
-															margin={{
-																	"top": 30,
-																	"right": 50,
-																	"bottom": 50,
-																	"left": 60
-															}}
-															padding={0.3}
-															colors="nivo"
-															colorBy="id"
-															defs={[
-																	{
-																			"id": "dots",
-																			"type": "patternLines",
-																			"background": "inherit",
-																			"color": "#ff605d",
-																			"size": 4,
-																			"padding": 1,
-																			"stagger": true
-																	},
-																	{
-																			"id": "lines",
-																			"type": "patternLines",
-																			"background": "inherit",
-																			"color": "#eed312",
-																			"rotation": -45,
-																			"lineWidth": 6,
-																			"spacing": 10
-																	}
-															]}
-															fill={[
-																	{
-																			"match": {
-																					"id": "Percentage Certain"
-																			},
-																			"id": "dots"
-																	}
-															]}
-															layout="horizontal"
-															borderColor="inherit:darker(1.6)"
-															labelSkipWidth={12}
-															labelSkipHeight={12}
-															axisBottom={{
-											            "orient": "bottom",
-											            "tickSize": 5,
-											            "tickPadding": 5,
-											            "tickRotation": 0,
-											            "legend": "% Certainty",
-											            "legendPosition": "right",
-											            "legendOffset": 36,
-											        }}
-															labelTextColor="inherit:darker(1.6)"
-															animate={true}
-															motionStiffness={90}
-															motionDamping={13}
-													/>
+												<Chart value="10" length="short" label="Ash Grey Color" color={colorarray4}/>
+												<Chart value="9" length="short" label="Vehicle" color={colorarray2}/>
+												<Chart value="8" length="short" label="Car" color={colorarray3}/>
+												<Chart value="6" length="short" label="Sports Car" color={colorarray}/>
 													</div>
 												</div>
                   </div>
@@ -231,77 +155,11 @@ export default class Claim extends React.Component {
                 </div>
                 <div className="answer1">
 											<div className="sentiment-chart">
-											<ResponsiveBar
-										        data={[{
-														    "Emotion": "Anger",
-														    "Anger": 50,
-														  },
-														  {
-														    "Emotion": "Fear",
-																"Fear": 70,
-														  },
-														  {
-														    "Emotion": "Joy",
-														    "Joy": 30,
-														  },
-														  {
-														    "Emotion": "Sadness",
-														    "Sadness": 40,
-														  }
-													    ]}
-										        keys={[
-										            "Anger",
-																"Joy",
-																"Sadness",
-																"Fear"
-										        ]}
-										        indexBy="Emotion"
-										        margin={{
-										            "top": 50,
-										            "right": 130,
-										            "bottom": 50,
-										            "left": 60
-										        }}
-										        padding={0.3}
-										        colors="nivo"
-										        colorBy="id"
-										        defs={[
-										            {
-										                "id": "dots",
-										                "type": "patternLines",
-										                "background": "inherit",
-										                "color": "#ff605d",
-										                "size": 4,
-										                "padding": 1,
-										                "stagger": true
-										            },
-										            {
-										                "id": "lines",
-										                "type": "patternLines",
-										                "background": "inherit",
-										                "color": "#eed312",
-										                "rotation": -45,
-										                "lineWidth": 6,
-										                "spacing": 10
-										            }
-										        ]}
-										        fill={[
-										            {
-										                "match": {
-										                    "id": "Percentage Certain"
-										                },
-										                "id": "dots"
-										            }
-										        ]}
-										        borderColor="inherit:darker(1.6)"
-										        labelSkipWidth={12}
-										        labelSkipHeight={12}
-										        labelTextColor="inherit:darker(1.6)"
-										        animate={true}
-										        motionStiffness={90}
-										        motionDamping={15}
-										    />
-												</div>
+												<Chart value="5" length="long" label="Anger" color={colorarray4}/>
+												<Chart value="3" length="long" label="Fear" color={colorarray2}/>
+												<Chart value="6" length="long" label="Sad" color={colorarray3}/>
+												<Chart value="1" length="long" label="Joy" color={colorarray}/>
+											</div>
                 </div>
             </div>
         </div>
