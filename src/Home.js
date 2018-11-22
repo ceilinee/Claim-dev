@@ -80,7 +80,7 @@ class Home extends Component {
       <div className="banner">
           <h1 className="home-h1">Welcome to the agent portal</h1>
           <p className= "paragraph">
-            October 12th is our firm wide event on insurance do not forget to attend
+            October 12th is our firm wide community impact event, come support our contributions!
           </p>
       </div>
     )
@@ -91,10 +91,10 @@ class Home extends Component {
         <div className="home-box">
           <Link to={`/portal`} className="home-box-inner">
             <div className="home-box-liner"/>
-            <img src="https://image.flaticon.com/icons/svg/68/68587.svg" alt="icon" className="home-icon"/>
+            <img src="https://image.flaticon.com/icons/svg/846/846325.svg" alt="icon" className="home-icon"/>
             <div className="home-box-title">
             Bruce Wayne Claim
-            <p className="home-text">Process this claim by Nov 30th this is a very urgent claim</p>
+            <p className="home-text">Process this claim by the end of this week, very expensive car involved.</p>
             </div>
           </Link>
           <div className="home-box-inner">
