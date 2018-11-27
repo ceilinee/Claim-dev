@@ -64,9 +64,7 @@ export default class Claim extends React.Component {
     })
   }
   renderModal = () => {
-    var date = this.props.claim.date.toString();
-		var data = 40;
-    var time = date.substring(0,10);
+		var time = moment().format('L');
 		var colorarray = ["#667EEA","#6778E2","#6972DA","#6B6DD2","#6D67CA","#6E61C2","#705CBA","#705CBA","#7450AA","#764BA2"];
 		var colorarray2 = ["#56A4E4","#579FE4","#599BE5","#5B97E6","#5D93E6","#5E8EE7","#608AE8","#6286E8","#6482E9","#667EEA"];
 		var colorarray3 = ["#36D1DC","#3AC8DD","#3EC0DE","#42B8DF","#46AFE0","#4AA7E1","#4AA7E1","#5296E3","#568EE4","#5B86E5"];
@@ -217,8 +215,7 @@ export default class Claim extends React.Component {
 		// 		.then(this.setState({open: false})).then(() => {this.props.refresh()});
 	}
   render(){
-    var date = this.props.claim.date.toString();
-    var time = date.substring(0,10);
+		var time = moment().format('L');
 		return(
         <tr>
             <div className="red"><td>Pending Review</td></div>

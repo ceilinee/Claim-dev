@@ -28,7 +28,7 @@ class App extends Component {
       open: false,
       claim: true,
       language: true,
-      claimlist: [{idClaims: 1, street: "Adelaide", city: "Adelaide", link: "https://i.imgur.com/BleOAcq.png", imgTrait: "90,80,70,90,90", chatTrait: "60,70,30,40", date: "10/10/2018"}],
+      claimlist: [{idClaims: 1, street: "Toronto", city: "ON", link: "https://i.imgur.com/BleOAcq.png", imgTrait: "90,80,70,90,90", chatTrait: "60,70,30,40", date: "10/10/2018"}],
       loading: true,
     }
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
